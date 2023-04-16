@@ -18,7 +18,7 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Hello 👋, and welcome to my personal docs site! My name is Fran, and I'm a `Technical Writer` passionate about creating documentation. 
+Hi 👋, and welcome to my site! My name is Fran, and I'm a Technical Writer passionate about creating developer docs. 
 
-This is where I record processes that I want to remember and offer you a glimpse into my work.
+This is where I record processes I want to remember and, at the same time, offer you a glimpse into my work.
 
