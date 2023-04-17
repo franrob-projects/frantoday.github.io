@@ -66,5 +66,3 @@ Here's a breakdown of the code:
 
 5. The navigation bar is created using the `<nav>` element. Inside the `<nav>` element, there are four links created using the `<a>` element. 
 The href attribute specifies the URL that the link should go to, and the text between the opening and closing `<a>` tags is the text that appears as the link. The first link has a class of `active`, which is used to style the currently active link differently.
-
-Overall, this code creates a basic HTML page with a navigation bar and four links. It could be expanded upon with additional HTML and CSS to create a more complete website.

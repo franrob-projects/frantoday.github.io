@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Install Ruby on Mac
-description: Ruby is a versatile programming language used for web development, automation, and data processing
+description: Ruby is a versatile programming language used for web development, automation, and data processing.
 img: assets/img/ruby.jpg
 importance: 2
 category: install

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Install Jekyll on Mac
-description: Jekyll is a static site generator that helps create and manage websites without a database or server-side scripting
+description: Jekyll is a static site generator that helps create and manage websites without a database or server-side scripting.
 img: assets/img/jekyll.jpg
 importance: 1
 category: install
