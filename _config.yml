@@ -7,8 +7,7 @@ first_name: Fran
 middle_name: 
 last_name: 
 email: francisroberts@live.com
-description: Where I record processes I want to remember and, at the same time, offer you a glimpse into my work.
-
+description:
 > # the ">" symbol means to ignore newlines until "footer_text:"
 # footer_text: >
 #   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
