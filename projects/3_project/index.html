@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/frannnn.uk/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 3 | Fran  </title>
+    <title>VMware Fusion | Fran  </title>
     <meta name="author" content="Fran  ">
-    <meta name="description" content="a project that redirects to another website">
+    <meta name="description" content="VMware Fusion is a virtualization software program for Mac runs other operating systems, such as Windows or Linux as a virtual machine.">
 
 
     <!-- Bootstrap & MDB -->
@@ -76,9 +75,6 @@
               <li class="nav-item ">
                 <a class="nav-link" href="/frannnn.uk/projects/">projects</a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/frannnn.uk/cv/">cv</a>
-              </li>
 
               <!-- Toogle theme mode -->
               <li class="toggle-container">
@@ -107,145 +103,51 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 3</h1>
-            <p class="post-description">a project that redirects to another website</p>
+            <h1 class="post-title">VMware Fusion</h1>
+            <p class="post-description">VMware Fusion is a virtualization software program for Mac runs other operating systems, such as Windows or Linux as a virtual machine.</p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
+            <p>Here are the steps to install VMware Fusion on a Mac using Terminal:</p>
 
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
+<ol>
+  <li>
+    <p>Download the VMware Fusion disk image file (ending in <code class="language-plaintext highlighter-rouge">.dmg</code>) from the VMware website to your Downloads folder.</p>
+  </li>
+  <li>
+    <p>Open Terminal by going to Applications &gt; Utilities &gt; Terminal.</p>
+  </li>
+  <li>
+    <p>In Terminal, navigate to your Downloads folder by entering the following command:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> cd ~/Downloads
+</code></pre></div>    </div>
+  </li>
+  <li>Mount the VMware Fusion disk image by entering the following command:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> hdiutil mount VMware-Fusion-xxx.dmg
+</code></pre></div>    </div>
+    <p>Replace <code class="language-plaintext highlighter-rouge">xxx</code> with the version number of the VMware Fusion disk image you downloaded.</p>
+  </li>
+  <li>
+    <p>In the mounted disk image, double-click the <code class="language-plaintext highlighter-rouge">VMware Fusion.app</code> file to launch the VMware Fusion installer.</p>
+  </li>
+  <li>
+    <p>Follow the prompts in the installer to agree to the license agreement, choose the installation location, and enter your administrator password.</p>
+  </li>
+  <li>
+    <p>After the installation completes, unmount the VMware Fusion disk image by entering the following command:</p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> hdiutil unmount /Volumes/VMware\ Fusion/
+</code></pre></div>    </div>
+    <p>Replace <code class="language-plaintext highlighter-rouge">VMware\ Fusion</code> with the name of the mounted disk image as it appears in the Finder.</p>
+  </li>
+  <li>Launch VMware Fusion from the Applications folder.</li>
+</ol>
 
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/frannnn.uk/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/frannnn.uk/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/frannnn.uk/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/frannnn.uk/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/frannnn.uk/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/frannnn.uk/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
+<p>Once you have installed VMware Fusion, you can create a new virtual machine and install the operating system of your choice.</p>
 
           </article>
 
