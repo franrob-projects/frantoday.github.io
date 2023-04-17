@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: My handwritten notes turned into writing projects.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [install, code]
 horizontal: false
 ---
 

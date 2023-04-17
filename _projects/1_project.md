@@ -1,80 +1,75 @@
 ---
 layout: page
-title: manipulating tables in SQLS
-description: a project with a background image
-img: assets/img/sunder-muthukumaran-n7eJHQwefeI-unsplash.jpg
+title: Install Jekyll on Mac
+description: Jekyll is a static site generator that helps create and manage websites without a database or server-side scripting
+img: assets/img/jekyll.jpg
 importance: 1
-category: work
+category: install
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+You must have Ruby and RubyGems installed on your system to install Jekyll. Here are the steps to install Jekyll on a Mac system:
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+1. Install Ruby:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+    Although macOS comes with Ruby pre-installed, it's usually an older version. Jekyll requires Ruby 2.5.0 or higher. 
+    To install the latest version of Ruby, use the following command:
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+    ```
+    sudo apt-get install ruby-full
+    ```
+    Once the installation is complete, add the following line to your `~/.zshrc` or `~/.bashrc` file:
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+    ```
+    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+    ```
+    Save the file and restart the Terminal. Now, install the latest Ruby version:
 
+    ```
+    rbenv install 3.0.2
+    rbenv global 3.0.2
+    ```
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+    Verify the Ruby version with:
 
+    ```
+    ruby -v
+    ```
+2. Install Jekyll and Bundler:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+    Now that you have the latest Ruby version installed, you can install Jekyll and Bundler using the following command:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+    ```
+    gem install jekyll bundler
+    ```
+
+4. Verify the Jekyll installation:
+
+    To ensure Jekyll has been installed correctly, run the following command:
+
+    ```
+    jekyll -v
+    ```
+    If the installation was successful, you should see the Jekyll version number.
+
+5. Create a new Jekyll site:
+
+    To create a new Jekyll site, use the following command (replace `my-new-site` with your desired directory name):
+
+    ```
+    jekyll new my-new-site
+    ```
+
+6. Change to the new site's directory:
+
+    ```
+    cd my-new-site
+    ```
+
+7. Start the Jekyll development server:
+
+    ```
+    bundle exec jekyll serve
+    ```
+Now, open your web browser and navigate to `http://localhost:4000` to see your Jekyll site live.
+
+That's it!

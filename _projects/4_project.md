@@ -1,80 +1,112 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
+title: Git Cheat Sheet
+description: Git is essential for effective and efficient version control, collaboration, and management of software development and docs-as-code projects.
+img: assets/img/git3.jpg
 importance: 3
-category: fun
+category: code
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+1. Git Branching:
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+    To create a new branch and switch to it:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+    ```
+    git checkout -b feature-branch
+    ```
+    
+    To list all branches:
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+    ```
+    git branch
+    ```
+    
+    To switch to a different branch:
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+    ```
+    git checkout master
+    ```
+    
+    To delete a branch:
 
+    ```
+    git branch -d feature-branch
+    ```
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+2. Git Rebase:
 
+    To rebase your current branch onto the master branch:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+    ```
+    git checkout feature-branch
+    git rebase master
+    ```
+    To abort a rebase:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+    ```
+    git rebase --abort
+    ```
+
+3. Git Submodules:
+
+    To add a Git submodule to your repository:
+
+    ```
+    git submodule add <repository_url> <directory>
+    ```
+
+    To clone a repository that contains submodules:
+
+    ```
+    git clone --recursive <repository_url>
+    ```
+4. Git Hooks:
+
+    To create a pre-commit hook that runs a script before each commit:
+
+    ```
+    touch .git/hooks/pre-commit
+    chmod +x .git/hooks/pre-commit
+    ```
+    Edit the `pre-commit` file with your script.
+
+5. Git Stash:
+
+    To temporarily save changes in a stash:
+
+    ```
+    git stash save "Work in progress"
+    ```
+    To apply a stash:
+
+    ```
+    git stash apply
+    ```
+
+    Git Bisect:
+    To start a bisect:
+
+    ```
+    git bisect start
+    ```
+    To mark a commit as good:
+
+    ```
+    git bisect good
+    ```
+
+    To mark a commit as bad:
+
+    ```
+    git bisect bad
+    ```
+
+7. Git Cherry-pick:
+
+    To apply a commit from another branch:
+
+    ```
+    git cherry-pick <commit>
 ```
-{% endraw %}
+
+For more commands refer to the [Git documentaion](https://git-scm.com/doc) 

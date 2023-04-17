@@ -1,80 +1,61 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
+title: SQL Cheat Sheet
+description: SQL is essential for managing and manipulating structured data in relational databases. 
+img: assets/img/sql.jpg
 importance: 3
-category: fun
+category: code
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Let's assume we have a table called `holidays` with columns `name`, `date`, and `country`, here are some examples of SQL commands for holidays:
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+1. Retrieving all holidays:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+    This command retrieves all rows and columns from the `holidays` table.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+    ```
+    SELECT * FROM holidays;
+    ```
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+2. Filtering holidays by country:
 
+    This command retrieves all rows and columns from the `holidays` table where the `country` column is `USA`.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+    ```
+    SELECT * FROM holidays WHERE country = 'USA';
+    ```
 
+3. Retrieving holidays within a date range:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+    This command retrieves all rows and columns from the `holidays` table where the `date` column is between May 1, 2023 and December 31, 2023.
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+    ```
+    SELECT * FROM holidays WHERE date BETWEEN '2023-05-01' AND '2023-12-31';
+    ```
+
+4. Sorting holidays by date:
+
+    This command retrieves all rows and columns from the `holidays` table and sorts them in ascending order by the `date` column.
+
+    ```
+    SELECT * FROM holidays ORDER BY date ASC;
+    ```
+
+4. Grouping holidays by month:
+
+    This command retrieves the month (as a number) and the count of holidays for each month from the `holidays` table, grouped by month.
+
+    ```
+    SELECT MONTH(date) AS month, COUNT(*) AS count FROM holidays GROUP BY month;
+    ```
+
+5. Inserting a new holiday:
+
+    This command inserts a new row into the `holidays` table with the values `Independence Day` for `name`, `2023-07-04` for `date`, and `USA` for `country`.
+
+    ```
+    INSERT INTO holidays (name, date, country) VALUES ('Independence Day',
+    '2023-07-04', 'USA');
+    ```
+
+To learn more, check out the SQL Commands article on [Codecademy](https://www.codecademy.com/article/sql-commands) 
